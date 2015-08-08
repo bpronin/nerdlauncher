@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.Collections;
@@ -46,7 +45,7 @@ public class NerdLauncherFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        ResolveInfo resolveInfo = (ResolveInfo)l.getAdapter().getItem(position);
+        ResolveInfo resolveInfo = (ResolveInfo) l.getAdapter().getItem(position);
         ActivityInfo activityInfo = resolveInfo.activityInfo;
 
         if (activityInfo == null) return;
